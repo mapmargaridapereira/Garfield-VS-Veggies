@@ -10,8 +10,6 @@ const startButton = document.getElementById("start");
 //create the player
 const player = new Player(0, 200, 45, 45, "orange", ctx);
 
-//create the food
-const food = new Food(100, 100, 10, 10, "blue", ctx);
 
 //start button on click
 startButton.onclick = function () {
