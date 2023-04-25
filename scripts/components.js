@@ -50,12 +50,10 @@ class Player {
   }
 
   crashWith(food) {
-    return (
-      this.bottom() > food.top() &&
+    return (this.bottom() > food.top() &&
       this.top() < food.bottom() &&
       this.right() > food.left() &&
-      this.left() < food.right()
-    );
+      this.left() < food.right());
   }
 }
 
@@ -92,20 +90,6 @@ class Food {
   
 
 }
-
-/* checkCollision() {
-    const head = this.body[0];
-    if (head.x < 0 || head.x >= COLS || head.y < 0 || head.y >= ROWS) {
-      return true;
-    }
-    for (let i = 1; i < this.body.length; i++) {
-      if (head.x === this.body[i].x && head.y === this.body[i].y) {
-        return true;
-      }
-    }
-    return false;
-  }
-}*/
 
 /*class Food {
   constructor(posX, posY, width, height, color) {

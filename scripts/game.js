@@ -82,9 +82,26 @@ class Game {
             this.food.splice(i, 1);*/
       console.log("EW");
       this.updateVeggies();
-      if (this.veggies.length === 2) {//ALTERAR FULCRAL
+      if (this.veggies.length > 1) {//not crashing but need to change interval
         this.veggies.splice(k,1); //clears veggies after some time
       }
     }
-  };
+  }
+
+  checkGameOver(){
+    const crashed = this.veggies.some((veg)=>{
+        return this.player.crashWith(veg);
+    })
+    if(crashed){
+        ctx.fillStyle = 'black';
+        ctx.fillRect(50, 200, 400, 250);
+        ctx.font = '32px Helvetica';
+        ctx.fillStyle = 'red';
+        ctx.fillText('Game Over', 150, 300);
+        ctx.fillStyle = 'white';
+        ctx.fillText('Your final score', 135, 350);
+        this.ctx.fillText(`${this.score}`, 230, 400);
+        this.stop();
+    }
+}
 }
