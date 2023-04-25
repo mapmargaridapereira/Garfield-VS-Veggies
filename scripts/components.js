@@ -134,10 +134,12 @@ class Veggie {
     this.color = color;
     this.ctx = ctx;
   
-    let img = new Image();
-    img.src = "../img/veggie.png";
-    img.addEventListener('load', () => {
-        this.image = img;
+    let veggieArray = ["veggie.png", "broccoli.png", "salad.png"];
+    let randomIndex = Math.floor(Math.random() * veggieArray.length);
+    let newImage = new Image();
+    newImage.src = "./img/" + veggieArray[randomIndex];
+    newImage.addEventListener('load', () => {
+        this.image = newImage;
     });
   }
 

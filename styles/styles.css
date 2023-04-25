@@ -4,7 +4,8 @@ html,body {
   padding: 0;
   margin: 0;
   font-family: "Patrick Hand";
-  background-image: linear-gradient(to right top, #ffa500, #ffa200, #ff9f00, #ff9b00, #ff9800, #ff9500, #ff9200, #ff8f00, #ff8c00, #ff8800, #fe8500, #fe8101);  background-repeat: no-repeat;
+  background-image: linear-gradient(to right top, #ffa500, #ffa200, #ff9f00, #ff9b00, #ff9800, #ff9500, #ff9200, #ff8f00, #ff8c00, #ff8800, #fe8500, #fe8101);  
+  background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: inherit;
   background-position: 95% 50%;
@@ -34,6 +35,11 @@ html,body {
     background: #ead5a4;
     display: block;
     margin: 0% 0% 1% 29%;
+    
+    border-width: 4px;
+    border-style: solid;
+    border-image: linear-gradient(to right top, #fe8101, #fb7310, #f8651b, #f35622, #ee4729, #f15026, #f45923, #f7621f, #ff830c, #ffa200, #ffc100, #ffdf14);
+    
   }
   
   #start{
