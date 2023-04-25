@@ -1,51 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
 html,body {
   padding: 0;
   margin: 0;
-  font-family: Comic Sans MS;
+  font-family: "Patrick Hand";
   background-image: linear-gradient(to right top, #ffa500, #ffa200, #ff9f00, #ff9b00, #ff9800, #ff9500, #ff9200, #ff8f00, #ff8c00, #ff8800, #fe8500, #fe8101);  background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: inherit;
   background-position: 95% 50%;
 }
 
-h1 {
-  color: #ffd9ff;
-  font-size: 56px;
-  text-align: center;
-  margin-top: 1%;
-}
+  #veggies-text{
+    color: green;
+  }
+  #garfield-text{
+    color: #FC0300;
+  }
+  h1 {
+    color: #ffd9ff;
+    font-size: 56px;
+    text-align: center;
+    margin-top: 1%;
+  }
+  
+  #score-text {
+    text-align: center;
+    color: #ffd9ff;
+    font-size: 2vw;
+    margin: -2% 0% 0% 0%;
+  }
+  
+  canvas {
+    background: #ead5a4;
+    display: block;
+    margin: 0% 0% 1% 29%;
+  }
+  
+  #start{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  #instructions{
+    font-size: 1.2vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 26%;
+    padding-left: 2vw;
+    letter-spacing: 0.5px;
+    word-spacing:2px;
+    position: absolute;
+  }
+  
+  #background-garfield {
+    position: absolute;
+    top: 30%;
+    left: 72%;
+    width: 28vw;
+  }
 
-#score-text {
-  text-align: center;
-  color: #ffd9ff;
-  font-size: 2vw;
-  margin: -2% 0% 0% 0%;
-}
-
-canvas {
-  background: #ead5a4;
-  display: block;
-  margin: -14% 0% 1% 29%;
-}
-
-#start{
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-
-#instructions{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-  width: 26%;
-  padding-left: 2vw;
-}
-
-img{
-  position: absolute;
-  top: 30%;
-  left: 72%;
-  width: 28vw;}
+  #keyboard-img{
+    width: 50%;
+  }

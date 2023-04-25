@@ -124,14 +124,15 @@ class Game {
     bgMusic.pause();
     gameOverSound.play();
     gameOverSound.loop = false;
-    ctx.fillStyle = "black";
-    ctx.fillRect(50, 200, 400, 250);
+    ctx.fillStyle = "#FE8101";
+    ctx.fillRect(150, 120, 400, 250);
     ctx.font = "32px Helvetica";
     ctx.fillStyle = "red";
-    ctx.fillText("Game Over", 150, 300);
+    ctx.fillText("Game Over", 270, 200);
     ctx.fillStyle = 'white';
-    ctx.fillText('Your final score', 135, 350);
-    this.ctx.fillText(`${this.score}`, 230, 400);
+    ctx.fillText('Your final score', 240, 250);
+    this.ctx.fillText(`${this.score}`, 340, 310);
+
   }
 
   checkGameOver() {

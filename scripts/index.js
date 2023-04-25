@@ -39,32 +39,36 @@ document.addEventListener("keydown", (e) => {
         player.speedX = 0;
         player.speedY = -5;
         player.direction = "up";
+        player.image.src = './img/garfield/garfield_head_up.png';
+        player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
       }
-     // player.ctx.drawImage( player.x, player.y, player.w, player.h);
       break;
     case "ArrowDown":
       if (player.direction !== "up") {
         player.speedX = 0;
         player.speedY = 5;
         player.direction = "down";
+        player.image.src = './img/garfield/garfield_head_down.png';
+        player.ctx.drawImage( player.x, player.y, player.w, player.h);
       }
-     // player.ctx.drawImage( player.x, player.y, player.w, player.h);
       break;
     case "ArrowLeft":
       if (player.direction !== "right") {
         player.speedX = -5;
         player.speedY = 0;
         player.direction = "left";
+        player.image.src = './img/garfield/garfield_head_left.png';
+        player.ctx.drawImage( player.x, player.y, player.w, player.h);
       }
-    //  player.ctx.drawImage( player.x, player.y, player.w, player.h);
       break;
     case "ArrowRight":
       if (player.direction !== "left") {
         player.speedX = 5;
         player.speedY = 0;
         player.direction = "right";
+        player.image.src = './img/garfield/garfield_head_right.png';
+        player.ctx.drawImage( player.x, player.y, player.w, player.h);
       }
-     // player.ctx.drawImage( player.x, player.y, player.w, player.h);
       break;
   }
 });

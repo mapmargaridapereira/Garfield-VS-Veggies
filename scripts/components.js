@@ -5,6 +5,7 @@ class Player {
     this.w = w;
     this.h = h;
     this.color = color; //img
+    this.image = new Image();
     this.ctx = ctx;
     this.speedX = 0;
     this.speedY = 0;
