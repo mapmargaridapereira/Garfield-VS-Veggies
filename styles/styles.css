@@ -36,11 +36,16 @@ html,body {
     display: block;
     margin: 0% 0% 1% 29%;
     
-    border-width: 4px;
-    border-style: solid;
-    border-image: linear-gradient(to right top, #fe8101, #fb7310, #f8651b, #f35622, #ee4729, #f15026, #f45923, #f7621f, #ff830c, #ffa200, #ffc100, #ffdf14);
-    
-  }
+    background: radial-gradient(circle at 100% 100%, #ead5a4 0, #ead5a4 5px, transparent 5px) 0% 0%/10px 10px no-repeat,
+    radial-gradient(circle at 0 100%, #ead5a4 0, #ead5a4 5px, transparent 5px) 100% 0%/10px 10px no-repeat,
+    radial-gradient(circle at 100% 0, #ead5a4 0, #ead5a4 5px, transparent 5px) 0% 100%/10px 10px no-repeat,
+    radial-gradient(circle at 0 0, #ead5a4 0, #ead5a4 5px, transparent 5px) 100% 100%/10px 10px no-repeat,
+    linear-gradient(#ead5a4, #ead5a4) 50% 50%/calc(100% - 10px) calc(100% - 20px) no-repeat,
+    linear-gradient(#ead5a4, #ead5a4) 50% 50%/calc(100% - 20px) calc(100% - 10px) no-repeat,
+    linear-gradient(46deg, #e63030 21%, #FE8101 53%, #FFDF14 73%);
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;  }
   
   #start{
     display: flex;
