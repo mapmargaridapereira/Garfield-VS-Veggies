@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snake</title>
-    <link rel="stylesheet" href="./styles/styles.css"/>
-</head>
-<body>
-    <h1>First Project</h1>
-    <h1>Snake</h1>
-    <p> Score: <span id = "score">0</span> 
-     </p> 
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <h1>Garfield VS Veggies</h1>
+    <p id="score-text">Score: <span id="score">0</span></p>
+    <div id="instructions">
+        <h2>Help Garfield!</h2>
+        <p>Garfield got lost and is very hungry but..... there's a catch, he is being offered veggies.. </p>
+        <p>Don't let Garfield eat the veggies or he will get sick!</p>
+    </div>
     <canvas id="canvas" width="700" height="500"></canvas>
-    <button id="start">Start Game</button>
-    <script src="./scripts/components.js"></script>   
+    <div id="start">
+      <button ><p>Start Game</p></button>
+    </div>
+    <script src="./scripts/components.js"></script>
     <script src="./scripts/game.js"></script>
     <script src="./scripts/index.js"></script>
-</body>
+  </body>
 </html>

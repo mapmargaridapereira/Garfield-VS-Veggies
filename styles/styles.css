@@ -1,18 +1,24 @@
-* {
+html,body {
   padding: 0;
   margin: 0;
-  color: #ffd9ff;
   font-family: Comic Sans MS;
-  background: #0abac7;
-  text-align: center;
-  margin-top: 5px;
+  background-color: rgb(254, 129, 1);
+  background-image: url('/img/background.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: inherit;
+  background-position: 95% 50%;
 }
 
 h1 {
+  color: #ffd9ff;
   font-size: 56px;
+  text-align: center;
 }
 
-p {
+#score-text {
+  text-align: center;
+  color: #ffd9ff;
   font-size: 28px;
 }
 
@@ -21,4 +27,17 @@ canvas {
   display: block;
   margin: 20px auto;
   margin-top: 20px;
+}
+
+#start{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#instructions{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
