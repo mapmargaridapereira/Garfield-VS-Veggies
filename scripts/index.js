@@ -49,7 +49,7 @@ document.addEventListener("keydown", (e) => {
         player.speedY = 5;
         player.direction = "down";
         player.image.src = './img/garfield/garfield_head_down.png';
-        player.ctx.drawImage( player.x, player.y, player.w, player.h);
+        player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
       }
       break;
     case "ArrowLeft":
@@ -58,7 +58,7 @@ document.addEventListener("keydown", (e) => {
         player.speedY = 0;
         player.direction = "left";
         player.image.src = './img/garfield/garfield_head_left.png';
-        player.ctx.drawImage( player.x, player.y, player.w, player.h);
+        player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
       }
       break;
     case "ArrowRight":
@@ -67,7 +67,7 @@ document.addEventListener("keydown", (e) => {
         player.speedY = 0;
         player.direction = "right";
         player.image.src = './img/garfield/garfield_head_right.png';
-        player.ctx.drawImage( player.x, player.y, player.w, player.h);
+        player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
       }
       break;
   }

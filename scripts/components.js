@@ -5,18 +5,26 @@ class Player {
     this.w = w;
     this.h = h;
     this.color = color; //img
-    this.image = new Image();
+    this.image = null;
     this.ctx = ctx;
     this.speedX = 0;
     this.speedY = 0;
     this.direction = "";
     this.playerDead = false
+
+    let img = new Image();
+    img.src = "../img/garfield/garfield_head_up.png";
+    img.addEventListener('load', () => {
+        this.image = img;
+    });
   }
 
-  draw() {  //draws player on the canvas
-    this.ctx.fillStyle = this.color;
-    this.ctx.fillRect(this.x, this.y, this.w, this.h);
-  }
+  //draws player on the canvas
+    draw() { 
+      if(this.image){
+        this.ctx.drawImage(this.image, this.x, this.y, this.w, this.h);
+      } 
+    }
 
   newPos() {
     if (this.x <= 0) {
