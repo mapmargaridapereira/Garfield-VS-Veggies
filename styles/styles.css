@@ -75,5 +75,21 @@ html,body {
   }
 
   .food{
-    width: 40%;
+    width: 100%;
+  }
+  .veggie{
+    width: 22%;
+  }
+
+  .food2{
+    width: 17%;
+  }
+  .food3{
+    width: 20%;
+  }
+  #bad-food{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }

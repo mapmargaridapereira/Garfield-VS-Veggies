@@ -8,7 +8,7 @@ const ctx = canvas.getContext("2d");
 const startButton = document.getElementById("start");
 
 //create the player
-const player = new Player(10, 200, 45, 45, "orange", ctx);
+const player = new Player(10, 200, 60, 60, "orange", ctx);
 
 //audio variable declaration
 const bgMusic = new Audio("./sounds/bgmusic.mp3");

@@ -62,7 +62,7 @@ class Game {
       let foodPositionY = Math.floor(Math.random() * (canvas.height - 20));
 
       this.food.push(
-        new Food(foodPositionX, foodPositionY, 20, 20, "green", this.ctx)
+        new Food(foodPositionX, foodPositionY, 40, 40, "green", this.ctx)
       );
     }
     if (this.food.length > 2) {
@@ -95,7 +95,7 @@ class Game {
       ); //need to divide so there's not too many on screen
 
       this.veggies.push(
-        new Food(veggiesPositionX, veggiesPositionY, 20, 20, "blue", this.ctx)
+        new Veggie(veggiesPositionX, veggiesPositionY, 40, 40, "blue", this.ctx)
       );
     }
   }
