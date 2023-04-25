@@ -10,6 +10,10 @@ const startButton = document.getElementById("start");
 //create the player
 const player = new Player(10, 200, 45, 45, "orange", ctx);
 
+//audio variable declaration
+
+
+
 const game = new Game(ctx, canvas.width, canvas.height, player);
 //start button on click
 startButton.onclick = function () {
