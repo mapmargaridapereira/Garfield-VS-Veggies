@@ -14,6 +14,9 @@ class Game {
 
   start() {
     this.intervalId = setInterval(this.update, 10); //player speed
+    bgMusic.play();
+    bgMusic.loop = true; 
+
   }
 
   reset(){
@@ -73,6 +76,8 @@ class Game {
         this.food.splice(i, 1);
         this.score += 10;
         score.innerHTML = this.score;
+        eatingSound.play();
+        eatingSound.loop = false; 
         console.log("CHOMP");
       }
     } 
@@ -105,6 +110,8 @@ class Game {
         //clears veggies after some time
       }
       if (this.player.crashWith(this.veggies[k])) {
+        eatingVeggiesSound.play();
+        eatingVeggiesSound.loop = false;
         this.gameOver();
         this.player.speedY = null;
         this.player.speedX = null;
@@ -114,6 +121,9 @@ class Game {
   };
 
   gameOver() {
+    bgMusic.pause();
+    gameOverSound.play();
+    gameOverSound.loop = false;
     ctx.fillStyle = "black";
     ctx.fillRect(50, 200, 400, 250);
     ctx.font = "32px Helvetica";

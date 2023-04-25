@@ -11,9 +11,14 @@ const startButton = document.getElementById("start");
 const player = new Player(10, 200, 45, 45, "orange", ctx);
 
 //audio variable declaration
+const bgMusic = new Audio("./sounds/bgmusic.mp3");
+bgMusic.volume = 0.2;
+const gameOverSound = new Audio("./sounds/gameover.mp3");
+gameOverSound.volume = 0.5;
+const eatingSound = new Audio("./sounds/chomp.mp3");
+const eatingVeggiesSound = new Audio("./sounds/ew.mp3");
 
-
-
+//create new game
 const game = new Game(ctx, canvas.width, canvas.height, player);
 //start button on click
 startButton.onclick = function () {
