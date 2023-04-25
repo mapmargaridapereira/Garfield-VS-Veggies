@@ -8,10 +8,25 @@ class Game {
     this.frames = 0;
     this.food = [];
     this.veggies = [];
+    this.score = 0;
+    this.gameRunning = false
   }
 
   start() {
     this.intervalId = setInterval(this.update, 10); //player speed
+  }
+
+  reset(){
+    this.intervalId = null;
+    this.frames = 0;
+    this.food = [];
+    this.veggies = [];
+    this.score = 0;
+    this.player.x = 10
+    this.player.y = 200
+    this.player.speedX = 0
+    this.player.speedY = 0
+    this.player.playerDead = false
   }
 
   update = () => {
@@ -23,6 +38,7 @@ class Game {
     this.grabFood();
     this.updateVeggies();
     this.grabVeggies();
+    this.checkGameOver()
   };
 
   stop() {
@@ -52,11 +68,14 @@ class Game {
   }
   grabFood = () => {
     for (let i = 0; i < this.food.length; i++) {
+      let score = document.getElementById('score');
       if (this.player.crashWith(this.food[i])) {
         this.food.splice(i, 1);
+        this.score += 10;
+        score.innerHTML = this.score;
         console.log("CHOMP");
       }
-    }
+    } 
   };
   updateVeggies() {
     for (let j = 0; j < this.veggies.length; j++) {
@@ -78,30 +97,45 @@ class Game {
 
   grabVeggies = () => {
     for (let k = 0; k < this.veggies.length; k++) {
-      /* if (this.player.crashWith(this.food[i])) {
-            this.food.splice(i, 1);*/
       console.log("EW");
       this.updateVeggies();
-      if (this.veggies.length > 1) {//not crashing but need to change interval
-        this.veggies.splice(k,1); //clears veggies after some time
+      if (this.veggies.length > 1) {
+        //not crashing but need to change interval
+        this.veggies.splice(k, 1);
+        //clears veggies after some time
+      }
+      if (this.player.crashWith(this.veggies[k])) {
+        this.gameOver();
+        this.player.speedY = null;
+        this.player.speedX = null;
+        this.stop();
       }
     }
+  };
+
+  gameOver() {
+    ctx.fillStyle = "black";
+    ctx.fillRect(50, 200, 400, 250);
+    ctx.font = "32px Helvetica";
+    ctx.fillStyle = "red";
+    ctx.fillText("Game Over", 150, 300);
+    ctx.fillStyle = 'white';
+    ctx.fillText('Your final score', 135, 350);
+    this.ctx.fillText(`${this.score}`, 230, 400);
   }
 
-  checkGameOver(){
-    const crashed = this.veggies.some((veg)=>{
-        return this.player.crashWith(veg);
-    })
-    if(crashed){
-        ctx.fillStyle = 'black';
-        ctx.fillRect(50, 200, 400, 250);
-        ctx.font = '32px Helvetica';
-        ctx.fillStyle = 'red';
-        ctx.fillText('Game Over', 150, 300);
-        ctx.fillStyle = 'white';
-        ctx.fillText('Your final score', 135, 350);
-        this.ctx.fillText(`${this.score}`, 230, 400);
-        this.stop();
+  checkGameOver() {
+    console.log("dead");
+    if (/* this.player.crashWith(this.veggies) || */ this.player.playerDead) {
+      this.stop();
+      this.gameOver();
     }
-}
+
+  }
+
+
+
+
+
+
 }

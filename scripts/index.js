@@ -8,14 +8,19 @@ const ctx = canvas.getContext("2d");
 const startButton = document.getElementById("start");
 
 //create the player
-const player = new Player(0, 200, 45, 45, "orange", ctx);
+const player = new Player(10, 200, 45, 45, "orange", ctx);
 
-
+const game = new Game(ctx, canvas.width, canvas.height, player);
 //start button on click
 startButton.onclick = function () {
+if(!game.gameRunning){
   console.log("starting");
-  const game = new Game(ctx, canvas.width, canvas.height, player);
   game.start();
+  game.gameRunning = true
+} else {
+  game.reset()
+  game.start();
+}
 };
 
 document.addEventListener("keydown", (e) => {
@@ -26,7 +31,7 @@ document.addEventListener("keydown", (e) => {
         player.speedY = -5;
         player.direction = "up";
       }
-      player.ctx.drawImage( player.x, player.y, player.w, player.h);
+     // player.ctx.drawImage( player.x, player.y, player.w, player.h);
       break;
     case "ArrowDown":
       if (player.direction !== "up") {
@@ -34,7 +39,7 @@ document.addEventListener("keydown", (e) => {
         player.speedY = 5;
         player.direction = "down";
       }
-      player.ctx.drawImage( player.x, player.y, player.w, player.h);
+     // player.ctx.drawImage( player.x, player.y, player.w, player.h);
       break;
     case "ArrowLeft":
       if (player.direction !== "right") {
@@ -42,7 +47,7 @@ document.addEventListener("keydown", (e) => {
         player.speedY = 0;
         player.direction = "left";
       }
-      player.ctx.drawImage( player.x, player.y, player.w, player.h);
+    //  player.ctx.drawImage( player.x, player.y, player.w, player.h);
       break;
     case "ArrowRight":
       if (player.direction !== "left") {
@@ -50,7 +55,7 @@ document.addEventListener("keydown", (e) => {
         player.speedY = 0;
         player.direction = "right";
       }
-      player.ctx.drawImage( player.x, player.y, player.w, player.h);
+     // player.ctx.drawImage( player.x, player.y, player.w, player.h);
       break;
   }
 });
