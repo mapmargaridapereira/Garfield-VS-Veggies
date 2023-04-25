@@ -91,6 +91,7 @@ class Food {
     this.y = y;
     this.w = w;
     this.h = h;
+    this.image = null;
     this.color = color;
     this.ctx = ctx;
   }
