@@ -67,7 +67,7 @@ html,body {
     justify-content: flex-start;
     align-items: center;
     width: 26%;
-    margin-left: 1vw;
+    margin:0vw 0vw 0vw 0.8vw;
     padding:0vw 0.7vw 0vw 1vw;
     letter-spacing: 0.5px;
     word-spacing:2px;
@@ -75,8 +75,8 @@ html,body {
     top: 8%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
+    background-image: linear-gradient(to left bottom, #f29309, #f69d07, #f9a606, #fcb007, #ffba09);  
   }
-  
   #background-garfield {
     position: absolute;
     top: 30%;
@@ -103,7 +103,7 @@ html,body {
   }
 
   .food{
-    width: 100%;
+    width: 90%;
   }
   .veggie{
     width: 22%;
@@ -118,13 +118,12 @@ html,body {
   #bad-food{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    row-gap: 2%;
   }
 
   #good-food{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
