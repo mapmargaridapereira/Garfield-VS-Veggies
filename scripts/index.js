@@ -23,7 +23,7 @@ function startGame() {
 if(!game.gameRunning){
   console.log("starting");
   game.start();
-  game.gameRunning = true
+  game.gameRunning = true;
 } else {
   game.reset()
   game.start();
