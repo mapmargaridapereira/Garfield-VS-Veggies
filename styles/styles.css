@@ -65,6 +65,7 @@ html,body {
     letter-spacing: 0.5px;
     word-spacing:2px;
     position: absolute;
+    top: 8%;
   }
   
   #background-garfield {
