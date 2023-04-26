@@ -5,7 +5,7 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
 //start button
-const startButton = document.getElementById("start");
+//const startButton = document.getElementById("start");
 
 //create the player
 const player = new Player(10, 200, 60, 60, "orange", ctx);
@@ -21,7 +21,8 @@ const eatingVeggiesSound = new Audio("./sounds/ew.mp3");
 //create new game
 const game = new Game(ctx, canvas.width, canvas.height, player);
 //start button on click
-startButton.onclick = function () {
+//startButton.onclick = function () {
+function startGame() {
 if(!game.gameRunning){
   console.log("starting");
   game.start();
@@ -32,6 +33,11 @@ if(!game.gameRunning){
 }
 };
 
+document.addEventListener("keydown", function(event) {
+  if (event.keyCode === 32) { // spacebar
+    startGame();
+  }
+});
 document.addEventListener("keydown", (e) => {
   switch (e.code) {
     case "ArrowUp":
