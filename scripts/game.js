@@ -126,11 +126,11 @@ class Game {
     gameOverSound.loop = false;
     ctx.fillStyle = "#FE8101";
     ctx.fillRect(150, 120, 400, 250);
-    ctx.font = "32px Helvetica";
+    ctx.font = "32px Patrick Hand";
     ctx.fillStyle = "red";
-    ctx.fillText("Game Over", 270, 200);
+    ctx.fillText("Game Over", 287, 200);
     ctx.fillStyle = 'white';
-    ctx.fillText('Your final score', 240, 250);
+    ctx.fillText('Your final score', 260, 250);
     this.ctx.fillText(`${this.score}`, 340, 310);
 
   }
