@@ -95,10 +95,12 @@ class Food {
     this.color = color;
     this.ctx = ctx;
   
-    let img = new Image();
-    img.src = "../img/food.png";
-    img.addEventListener('load', () => {
-        this.image = img;
+    const foodArray = ["food.png", "meatballs.png", "chips.png"];
+    const randomIndexFood = Math.floor(Math.random() * foodArray.length);
+    const newImageFood = new Image();
+    newImageFood.src = "./img/" + foodArray[randomIndexFood];
+    newImageFood.addEventListener('load', () => {
+        this.image = newImageFood;
     });
   }
 
@@ -134,9 +136,9 @@ class Veggie {
     this.color = color;
     this.ctx = ctx;
   
-    let veggieArray = ["veggie.png", "broccoli.png", "salad.png"];
-    let randomIndex = Math.floor(Math.random() * veggieArray.length);
-    let newImage = new Image();
+    const veggieArray = ["veggie.png", "broccoli.png", "salad.png"];
+    const randomIndex = Math.floor(Math.random() * veggieArray.length);
+    const newImage = new Image();
     newImage.src = "./img/" + veggieArray[randomIndex];
     newImage.addEventListener('load', () => {
         this.image = newImage;
@@ -163,5 +165,16 @@ class Veggie {
     if(this.image){
       this.ctx.drawImage(this.image, this.x, this.y, this.w, this.h);
     } 
+  }
+
+  generateNewPosition(playerX, playerY, canvasWidth, canvasHeight) {
+    let newX = 0;
+    let newY = 0;
+    do {
+      newX = Math.floor(Math.random() * canvasWidth);
+      newY = Math.floor(Math.random() * canvasHeight);
+    } while (newX === playerX && newY === playerY);
+    this.x = newX;
+    this.y = newY;
   }
 }

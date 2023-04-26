@@ -53,6 +53,11 @@ html,body {
     justify-content: center;
     align-content: center;
   }
+
+  #space-to-start{
+    font-size: 25px;
+    font-weight: bold;
+  }
   
   #instructions{
     font-size: 1.2vw;
@@ -78,7 +83,7 @@ html,body {
     left: 72%;
     width: 28vw;
     user-select:none;
-    pointer-events:none
+    pointer-events:none;
   }
 
   #keyboard-img{
@@ -111,6 +116,13 @@ html,body {
     width: 20%;
   }
   #bad-food{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #good-food{
     display: flex;
     flex-direction: column;
     justify-content: center;
