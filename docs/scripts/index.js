@@ -8,12 +8,12 @@ const ctx = canvas.getContext("2d");
 const player = new Player(10, 200, 60, 60, "orange", ctx);
 
 //audio variable declaration
-const bgMusic = new Audio("assets/sounds/bgmusic.mp3");
+const bgMusic = new Audio("docs/assets/sounds/bgmusic.mp3");
 bgMusic.volume = 0.2;
-const gameOverSound = new Audio("assets/sounds/gameover.mp3");
+const gameOverSound = new Audio("docs/assets/sounds/gameover.mp3");
 gameOverSound.volume = 0.5;
-const eatingSound = new Audio("assets/sounds/chomp.mp3");
-const eatingVeggiesSound = new Audio("assets/sounds/ew.mp3");
+const eatingSound = new Audio("docs/assets/sounds/chomp.mp3");
+const eatingVeggiesSound = new Audio("docs/assets/sounds/ew.mp3");
 
 //mute audio
 mute.onclick = function pauseAudio(){
@@ -52,7 +52,7 @@ document.addEventListener("keydown", (e) => {
         player.speedX = 0;
         player.speedY = -5;
         player.direction = "up";
-        player.image.src = 'assets/img/garfieldheadup.png';
+        player.image.src = 'docs/assets/img/garfieldheadup.png';
         player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
       }
       break;
@@ -61,7 +61,7 @@ document.addEventListener("keydown", (e) => {
         player.speedX = 0;
         player.speedY = 5;
         player.direction = "down";
-        player.image.src = 'assets/img/garfieldheaddown.png';
+        player.image.src = 'docs/assets/img/garfieldheaddown.png';
         player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
       }
       break;
@@ -70,7 +70,7 @@ document.addEventListener("keydown", (e) => {
         player.speedX = -5;
         player.speedY = 0;
         player.direction = "left";
-        player.image.src = 'assets/img/garfieldheadleft.png';
+        player.image.src = 'docs/assets/img/garfieldheadleft.png';
         player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
       }
       break;
@@ -79,7 +79,7 @@ document.addEventListener("keydown", (e) => {
         player.speedX = 5;
         player.speedY = 0;
         player.direction = "right";
-        player.image.src = 'assets/img/garfieldheadright.png';
+        player.image.src = 'docs/assets/img/garfieldheadright.png';
         player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
       }
       break;
