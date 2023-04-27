@@ -13,7 +13,7 @@ class Player {
     this.playerDead = false;
 
     let img = new Image();
-    img.src = "docs/assets/img/garfieldheadup.png";
+    img.src = "assets/img/garfieldheadup.png";
     img.addEventListener('load', () => {
         this.image = img;
     });
@@ -99,7 +99,7 @@ class Food {
     const foodArray = ["food.png", "meatballs.png", "chips.png"];
     const randomIndexFood = Math.floor(Math.random() * foodArray.length);
     const newImageFood = new Image();
-    newImageFood.src = "docs/assets/img/" + foodArray[randomIndexFood];
+    newImageFood.src = "assets/img/" + foodArray[randomIndexFood];
     newImageFood.addEventListener('load', () => {
         this.image = newImageFood;
     });
@@ -141,7 +141,7 @@ class Veggie {
     const veggieArray = ["veggie.png", "broccoli.png", "salad.png"];
     const randomIndex = Math.floor(Math.random() * veggieArray.length);
     const newImage = new Image();
-    newImage.src = "docs/assets/img/" + veggieArray[randomIndex];
+    newImage.src = "assets/img/" + veggieArray[randomIndex];
     newImage.addEventListener('load', () => {
         this.image = newImage;
     });
