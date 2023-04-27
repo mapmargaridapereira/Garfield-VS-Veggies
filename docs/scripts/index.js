@@ -52,7 +52,7 @@ document.addEventListener("keydown", (e) => {
         player.speedX = 0;
         player.speedY = -5;
         player.direction = "up";
-        player.image.src = 'docs/assets/img/garfield/garfield_head_up.png';
+        player.image.src = 'docs/assets/img/garfield_head_up.png';
         player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
       }
       break;
@@ -61,7 +61,7 @@ document.addEventListener("keydown", (e) => {
         player.speedX = 0;
         player.speedY = 5;
         player.direction = "down";
-        player.image.src = 'docs/assets/img/garfield/garfield_head_down.png';
+        player.image.src = 'docs/assets/img/garfield_head_down.png';
         player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
       }
       break;
@@ -70,7 +70,7 @@ document.addEventListener("keydown", (e) => {
         player.speedX = -5;
         player.speedY = 0;
         player.direction = "left";
-        player.image.src = 'docs/assets/img/garfield/garfield_head_left.png';
+        player.image.src = 'docs/assets/img/garfield_head_left.png';
         player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
       }
       break;
@@ -79,7 +79,7 @@ document.addEventListener("keydown", (e) => {
         player.speedX = 5;
         player.speedY = 0;
         player.direction = "right";
-        player.image.src = 'docs/assets/img/garfield/garfield_head_right.png';
+        player.image.src = 'docs/assets/img/garfield_head_right.png';
         player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
       }
       break;
