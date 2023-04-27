@@ -182,7 +182,7 @@ html,body {
   }
 
   #bold-text{
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight:bold;
     color: green;
     text-align: center;
@@ -190,4 +190,9 @@ html,body {
 
   #highScore{
     margin-left: 5%;
+  }
+
+  hr{
+    width: 100%;
+    height: 5px;
   }
