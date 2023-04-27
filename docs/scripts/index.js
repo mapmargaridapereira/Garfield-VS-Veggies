@@ -23,6 +23,8 @@ eatingVeggiesSound.muted = true;
 gameOverSound.muted = true;
 };
 
+
+
 //create new game
 const game = new Game(ctx, canvas.width, canvas.height, player);
 
