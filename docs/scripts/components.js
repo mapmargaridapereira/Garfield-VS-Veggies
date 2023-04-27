@@ -28,23 +28,16 @@ class Player {
 
   newPos() {
     if (this.x <= 0) {
-/*       this.x = 0; */
       this.playerDead = true
-    } else if (this.x + 45 >= 700) {
-      //player size minus canvas width
-   /*    this.x = 650; */
+    } else if (this.x + 60 >= 700) {
       this.playerDead = true
-       //change here
     }
     this.x += this.speedX;
 
     if (this.y <= 0) {
-/*       this.y = 0; */
       this.playerDead = true
-    } else if (this.y + 45 >= 500) {
-     /*  this.y = 450; */
+    } else if (this.y + 60 >= 500) {
       this.playerDead = true
-       //change here
     }
     this.y += this.speedY;
     
@@ -169,7 +162,7 @@ class Veggie {
     } 
   }
 
-  generateNewPosition(playerX, playerY, canvasWidth, canvasHeight) {
+ /* generateNewPosition(playerX, playerY, canvasWidth, canvasHeight) {
     let newX = 0;
     let newY = 0;
     do {
@@ -178,5 +171,5 @@ class Veggie {
     } while (newX === player.x && newY === player.y);
     this.x = newX;
     this.y = newY;
-  }
+  }*/
 }

@@ -23,8 +23,6 @@ eatingVeggiesSound.muted = true;
 gameOverSound.muted = true;
 };
 
-
-
 //create new game
 const game = new Game(ctx, canvas.width, canvas.height, player);
 
@@ -47,6 +45,7 @@ document.addEventListener("keydown", function(event) {
   }
 });
 
+//movement keys for the player
 document.addEventListener("keydown", (e) => {
   switch (e.code) {
     case "ArrowUp":

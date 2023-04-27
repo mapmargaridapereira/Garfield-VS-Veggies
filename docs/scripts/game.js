@@ -13,7 +13,7 @@ class Game {
   }
 
   start() {
-    this.intervalId = setInterval(this.update, 10); //player speed
+    this.intervalId = setInterval(this.update, 10); 
     bgMusic.play();
     bgMusic.loop = true; 
     if (this.score >= 50) {
@@ -91,30 +91,29 @@ class Game {
       }
     } 
   };
+ 
   updateVeggies() {
     for (let j = 0; j < this.veggies.length; j++) {
       this.veggies[j].draw(); // continue draw enemy
     }
+  
     if (this.frames % 200 === 0) {
-
-      let veggiesPositionX = Math.floor(
-        (Math.random() * (canvas.width - 20)) / 2
+      let veggiesPositionX, veggiesPositionY;
+  
+      do {
+        veggiesPositionX = Math.floor(Math.random() * (canvas.width - 20)) / 2;
+        veggiesPositionY = Math.floor(Math.random() * (canvas.height - 20)) / 2;
+      } while (
+        Math.abs(veggiesPositionX - this.player.x) < 50 &&
+        Math.abs(veggiesPositionY - this.player.y) < 50
       );
-      let veggiesPositionY = Math.floor(
-        (Math.random() * (canvas.height - 20)) / 2
-      ); //need to divide so there's not too many on screen
-
-      console.log(this.player.x, veggiesPositionX)
-      console.log(this.player.y, veggiesPositionY)
-
-/*       if (veggiesPositionX < (this.player.x - 50) && veggiesPositionX > (this.player.x + 110) || veggiesPositionY < (this.player.y - 50) && veggiesPositionY > (this.player.y + 110)){ */
-        this.veggies.push(
-          new Veggie(veggiesPositionX, veggiesPositionY, 40, 40, "blue", this.ctx)
-        );
-        /* 
-      } */
+  
+      this.veggies.push(
+        new Veggie(veggiesPositionX,veggiesPositionY,40,40,"blue",this.ctx)
+      );
     }
   }
+  
 
   grabVeggies = () => {
     for (let k = 0; k < this.veggies.length; k++) {
