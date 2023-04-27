@@ -13,7 +13,7 @@ class Player {
     this.playerDead = false;
 
     let img = new Image();
-    img.src = "docs/assets/img/garfield_head_up.png";
+    img.src = "docs/assets/img/garfieldheadup.png";
     img.addEventListener('load', () => {
         this.image = img;
     });
