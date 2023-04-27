@@ -13,7 +13,7 @@ class Player {
     this.playerDead = false;
 
     let img = new Image();
-    img.src = "../img/garfield/garfield_head_up.png";
+    img.src = "./img/garfield/garfield_head_up.png";
     img.addEventListener('load', () => {
         this.image = img;
     });
@@ -127,7 +127,6 @@ class Food {
     } 
   }
 }
-
 
 class Veggie {
   constructor(x, y, w, h, color, ctx) {
