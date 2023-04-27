@@ -15,6 +15,14 @@ gameOverSound.volume = 0.5;
 const eatingSound = new Audio("./sounds/chomp.mp3");
 const eatingVeggiesSound = new Audio("./sounds/ew.mp3");
 
+//mute audio
+mute.onclick = function pauseAudio(){
+bgMusic.muted = true;
+eatingSound.muted = true;
+eatingVeggiesSound.muted = true;
+gameOverSound.muted = true;
+};
+
 //create new game
 const game = new Game(ctx, canvas.width, canvas.height, player);
 

@@ -25,11 +25,19 @@ html,body {
     margin-top: 1%;
   }
   
-  #score-text {
+  .score-text {
     text-align: center;
     color: #ffd9ff;
     font-size: 2vw;
     margin: -2% 0% 0% 0%;
+  }
+
+  #pontuation{
+    display: flex;
+    justify-content: center;
+    column-gap: 15%;
+    margin:6vh 0vh 2vh 0vh;
+
   }
   
   canvas {
@@ -73,7 +81,7 @@ html,body {
     letter-spacing: 0.5px;
     word-spacing:2px;
     position: absolute;
-    top: 8%;
+    top: 1%; /*change for the presentation to 7%*/
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
     background-image: linear-gradient(to left bottom, #f29309, #f69d07, #f9a606, #fcb007, #ffba09);  
@@ -135,4 +143,18 @@ html,body {
     margin: 0 1vw;
   }
 
-  
+  #mute-img{
+    width: 2vw;
+  }
+  #mute{
+    background-color: rgba(255, 0, 0, 0);
+    border: none;
+    position: absolute;
+    left: 29%;
+    box-shadow: 5px 0px 0px 0px #888888;
+  }
+
+  #mute:hover{
+    border:3px solid red;
+    border-radius: 10000px;
+  }

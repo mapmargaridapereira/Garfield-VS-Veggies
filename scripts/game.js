@@ -16,7 +16,15 @@ class Game {
     this.intervalId = setInterval(this.update, 10); //player speed
     bgMusic.play();
     bgMusic.loop = true; 
-
+    if (this.score >= 50) {
+      this.intervalId = setInterval(this.update, 15);
+    }
+    else if (this.score >= 100) {
+      this.intervalId = setInterval(this.update, 20);
+    }
+    else if (this.score >= 150) {
+      this.intervalId = setInterval(this.update, 30);
+    }
   }
 
   reset(){
@@ -41,7 +49,8 @@ class Game {
     this.grabFood();
     this.updateVeggies();
     this.grabVeggies();
-    this.checkGameOver()
+    this.checkGameOver();
+    this.getHighScore();
   };
 
   stop() {
@@ -144,9 +153,20 @@ class Game {
 
   }
 
-
-
-
-
-
+  getHighScore() {
+    let high = document.getElementById('HighScore')
+    let currentScore = this.score;
+    let highscore = localStorage.getItem("HighScore");
+    if(highscore !== null){
+        if (currentScore >= highscore) {
+            localStorage.setItem("HighScore", currentScore);      
+        }
+    
+    }
+    else{
+        localStorage.setItem("HighScore", currentScore);
+    }
+    
+    high.innerHTML = ` ${highscore}`
+}
 }

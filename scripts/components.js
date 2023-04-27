@@ -10,7 +10,7 @@ class Player {
     this.speedX = 0;
     this.speedY = 0;
     this.direction = "";
-    this.playerDead = false
+    this.playerDead = false;
 
     let img = new Image();
     img.src = "../img/garfield/garfield_head_up.png";
@@ -94,6 +94,7 @@ class Food {
     this.image = null;
     this.color = color;
     this.ctx = ctx;
+    this.intervalId = null;
   
     const foodArray = ["food.png", "meatballs.png", "chips.png"];
     const randomIndexFood = Math.floor(Math.random() * foodArray.length);
@@ -126,6 +127,8 @@ class Food {
     } 
   }
 }
+
+
 class Veggie {
   constructor(x, y, w, h, color, ctx) {
     this.x = x;

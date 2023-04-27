@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Snake</title>
+    <title>Garfield vs Veggies</title>
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
     <h1><em><span id="garfield-text">Garfield</span> VS <span id="veggies-text">Veggies</span></em></h1>
-    <p id="score-text">Score: <span id="score">0</span></p>
+    <div id="pontuation">
+      <p class="score-text">Score: <span id="score">0</span></p>
+      <p class="score-text">High Score: <span id="HighScore">0</span></p>
+    </div>
     <div id="instructions">
         <h2>Help Garfield!</h2>
         <p>Garfield got lost and he is very hungry but..... there's a catch, he is being offered veggies.. </p>
@@ -32,6 +35,9 @@
     </div>
     <canvas id="canvas" width="700" height="500"></canvas>
     <img id="background-garfield" src="./img/background3.png" alt="Garfield">
+    <div>
+      <button id="mute"><img id="mute-img" src="./img/mute.png" alt="mute"></button>
+    </div>
     <div id="start">
       <p id="space-to-start">Press </p>
       <img id="space-img" src="./img/space.png" alt="">  
