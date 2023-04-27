@@ -176,7 +176,7 @@ class Veggie {
     do {
       newX = Math.floor(Math.random() * canvasWidth);
       newY = Math.floor(Math.random() * canvasHeight);
-    } while (newX === playerX && newY === playerY);
+    } while (newX === player.x && newY === player.y);
     this.x = newX;
     this.y = newY;
   }

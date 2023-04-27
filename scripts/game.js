@@ -96,6 +96,7 @@ class Game {
       this.veggies[j].draw(); // continue draw enemy
     }
     if (this.frames % 200 === 0) {
+
       let veggiesPositionX = Math.floor(
         (Math.random() * (canvas.width - 20)) / 2
       );
@@ -103,9 +104,15 @@ class Game {
         (Math.random() * (canvas.height - 20)) / 2
       ); //need to divide so there's not too many on screen
 
-      this.veggies.push(
-        new Veggie(veggiesPositionX, veggiesPositionY, 40, 40, "blue", this.ctx)
-      );
+      console.log(this.player.x, veggiesPositionX)
+      console.log(this.player.y, veggiesPositionY)
+
+/*       if (veggiesPositionX < (this.player.x - 50) && veggiesPositionX > (this.player.x + 110) || veggiesPositionY < (this.player.y - 50) && veggiesPositionY > (this.player.y + 110)){ */
+        this.veggies.push(
+          new Veggie(veggiesPositionX, veggiesPositionY, 40, 40, "blue", this.ctx)
+        );
+        /* 
+      } */
     }
   }
 

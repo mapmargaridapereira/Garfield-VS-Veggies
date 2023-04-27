@@ -24,6 +24,10 @@ html,body {
     text-align: center;
     margin-top: 1%;
   }
+
+  h2{
+    margin: 10px 0 0 0;
+  }
   
   .score-text {
     text-align: center;
@@ -35,15 +39,19 @@ html,body {
   #pontuation{
     display: flex;
     justify-content: center;
-    column-gap: 15%;
+    column-gap: 23%;
     margin:6vh 0vh 2vh 0vh;
 
   }
-  
+
+  #score-id{
+    padding-left: 5%;
+  }
   canvas {
     background: #ead5a4;
     display: block;
     margin: 0% 0% 1% 29%;
+    cursor: none;
     
     background: radial-gradient(circle at 100% 100%, #ead5a4 0, #ead5a4 5px, transparent 5px) 0% 0%/10px 10px no-repeat,
     radial-gradient(circle at 0 100%, #ead5a4 0, #ead5a4 5px, transparent 5px) 100% 0%/10px 10px no-repeat,
@@ -81,7 +89,7 @@ html,body {
     letter-spacing: 0.5px;
     word-spacing:2px;
     position: absolute;
-    top: 1%; /*change for the presentation to 7%*/
+    top: 3%; /*change for the presentation to 7%*/
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
     background-image: linear-gradient(to left bottom, #f29309, #f69d07, #f9a606, #fcb007, #ffba09);  
@@ -141,20 +149,45 @@ html,body {
     width: 10%;
     height: 5%;
     margin: 0 1vw;
+    user-select: none;
+    pointer-events: none;
   }
 
   #mute-img{
     width: 2vw;
+    user-select: none;
+    pointer-events: none;
   }
   #mute{
     background-color: rgba(255, 0, 0, 0);
-    border: none;
+    border: 1px solid #888888;
     position: absolute;
     left: 29%;
-    box-shadow: 5px 0px 0px 0px #888888;
-  }
+    box-shadow: 0px 3px #888888;
+    border-radius: 10000px;
+}  
+
 
   #mute:hover{
-    border:3px solid red;
-    border-radius: 10000px;
+    border: 1px solid #888888;
+    background-color: rgba(231, 117, 3, 0.509);
+    cursor: pointer;
+
+  }
+  #mute:active{
+    border: 1px solid #888888;
+    background-color: rgba(189, 95, 1, 0.509);
+    box-shadow: 0px 0px #888888;
+    transform: translateY(4px);
+  }
+
+  #bold-text{
+    font-size: 1rem;
+    font-weight:bold;
+    color: green;
+    text-align: center;
+  }
+
+  #highScore{
+    margin-left: 5%;
   }
