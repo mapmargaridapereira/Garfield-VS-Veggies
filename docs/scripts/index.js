@@ -49,8 +49,8 @@ if(!game.gameRunning){
   game.start();
   game.gameRunning = true;
 } else {
-  game.reset()
-  game.start();
+  game.reset();
+  game.update();
 }
 };
 

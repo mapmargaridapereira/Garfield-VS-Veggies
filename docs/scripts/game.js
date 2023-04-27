@@ -13,18 +13,9 @@ class Game {
   }
 
   start() {
-    this.intervalId = setInterval(this.update, 10); 
+    this.intervalId = setInterval(this.update, 20); 
     bgMusic.play();
     bgMusic.loop = true; 
-    if (this.score >= 50) {
-      this.intervalId = setInterval(this.update, 15);
-    }
-    else if (this.score >= 100) {
-      this.intervalId = setInterval(this.update, 20);
-    }
-    else if (this.score >= 150) {
-      this.intervalId = setInterval(this.update, 30);
-    }
   }
 
   reset(){
@@ -51,6 +42,174 @@ class Game {
     this.grabVeggies();
     this.checkGameOver();
     this.getHighScore();
+    if (this.score >= 30) {
+      document.addEventListener("keydown", (e) => {
+        switch (e.code) {
+          case "ArrowUp":
+            if (player.direction !== "down") {
+              player.speedX = 0;
+              player.speedY = -6;
+              player.direction = "up";
+              player.image.src = 'docs/assets/img/garfieldheadup.png';
+              player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
+            }
+            break;
+          case "ArrowDown":
+            if (player.direction !== "up") {
+              player.speedX = 0;
+              player.speedY = 6;
+              player.direction = "down";
+              player.image.src = 'docs/assets/img/garfieldheaddown.png';
+              player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
+            }
+            break;
+          case "ArrowLeft":
+            if (player.direction !== "right") {
+              player.speedX = -6;
+              player.speedY = 0;
+              player.direction = "left";
+              player.image.src = 'docs/assets/img/garfieldheadleft.png';
+              player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
+            }
+            break;
+          case "ArrowRight":
+            if (player.direction !== "left") {
+              player.speedX = 6;
+              player.speedY = 0;
+              player.direction = "right";
+              player.image.src = 'docs/assets/img/garfieldheadright.png';
+              player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
+            }
+            break;
+        }
+      });
+    }
+    else if (this.score >= 50) {
+      document.addEventListener("keydown", (e) => {
+        switch (e.code) {
+          case "ArrowUp":
+            if (player.direction !== "down") {
+              player.speedX = 0;
+              player.speedY = -8;
+              player.direction = "up";
+              player.image.src = 'docs/assets/img/garfieldheadup.png';
+              player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
+            }
+            break;
+          case "ArrowDown":
+            if (player.direction !== "up") {
+              player.speedX = 0;
+              player.speedY = 8;
+              player.direction = "down";
+              player.image.src = 'docs/assets/img/garfieldheaddown.png';
+              player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
+            }
+            break;
+          case "ArrowLeft":
+            if (player.direction !== "right") {
+              player.speedX = -8;
+              player.speedY = 0;
+              player.direction = "left";
+              player.image.src = 'docs/assets/img/garfieldheadleft.png';
+              player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
+            }
+            break;
+          case "ArrowRight":
+            if (player.direction !== "left") {
+              player.speedX = 8;
+              player.speedY = 0;
+              player.direction = "right";
+              player.image.src = 'docs/assets/img/garfieldheadright.png';
+              player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
+            }
+            break;
+        }
+      });
+    }
+    else if (this.score >= 100) {
+      document.addEventListener("keydown", (e) => {
+        switch (e.code) {
+          case "ArrowUp":
+            if (player.direction !== "down") {
+              player.speedX = 0;
+              player.speedY = -9;
+              player.direction = "up";
+              player.image.src = 'docs/assets/img/garfieldheadup.png';
+              player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
+            }
+            break;
+          case "ArrowDown":
+            if (player.direction !== "up") {
+              player.speedX = 0;
+              player.speedY = 9;
+              player.direction = "down";
+              player.image.src = 'docs/assets/img/garfieldheaddown.png';
+              player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
+            }
+            break;
+          case "ArrowLeft":
+            if (player.direction !== "right") {
+              player.speedX = -9;
+              player.speedY = 0;
+              player.direction = "left";
+              player.image.src = 'docs/assets/img/garfieldheadleft.png';
+              player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
+            }
+            break;
+          case "ArrowRight":
+            if (player.direction !== "left") {
+              player.speedX = 9;
+              player.speedY = 0;
+              player.direction = "right";
+              player.image.src = 'docs/assets/img/garfieldheadright.png';
+              player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
+            }
+            break;
+          }
+        });
+      }
+        else if (this.score >= 150) {
+          document.addEventListener("keydown", (e) => {
+            switch (e.code) {
+              case "ArrowUp":
+                if (player.direction !== "down") {
+                  player.speedX = 0;
+                  player.speedY = -10;
+                  player.direction = "up";
+                  player.image.src = 'docs/assets/img/garfieldheadup.png';
+                  player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
+                }
+                break;
+              case "ArrowDown":
+                if (player.direction !== "up") {
+                  player.speedX = 0;
+                  player.speedY = 10;
+                  player.direction = "down";
+                  player.image.src = 'docs/assets/img/garfieldheaddown.png';
+                  player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
+                }
+                break;
+              case "ArrowLeft":
+                if (player.direction !== "right") {
+                  player.speedX = -10;
+                  player.speedY = 0;
+                  player.direction = "left";
+                  player.image.src = 'docs/assets/img/garfieldheadleft.png';
+                  player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
+                }
+                break;
+              case "ArrowRight":
+                if (player.direction !== "left") {
+                  player.speedX = 10;
+                  player.speedY = 0;
+                  player.direction = "right";
+                  player.image.src = 'docs/assets/img/garfieldheadright.png';
+                  player.ctx.drawImage(player.image, player.x, player.y, player.w, player.h);
+                }
+                break;
+            }
+      });
+    }
   };
 
   stop() {
@@ -106,7 +265,7 @@ class Game {
       } while (
         Math.abs(veggiesPositionX - this.player.x) < 50 &&
         Math.abs(veggiesPositionY - this.player.y) < 50
-      ); //so veggies don't automatically spawn on top of player 
+      );
   
       this.veggies.push(
         new Veggie(veggiesPositionX,veggiesPositionY,40,40,"blue",this.ctx)
