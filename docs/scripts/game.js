@@ -106,7 +106,7 @@ class Game {
       } while (
         Math.abs(veggiesPositionX - this.player.x) < 50 &&
         Math.abs(veggiesPositionY - this.player.y) < 50
-      );
+      ); //so veggies don't automatically spawn on top of player 
   
       this.veggies.push(
         new Veggie(veggiesPositionX,veggiesPositionY,40,40,"blue",this.ctx)
