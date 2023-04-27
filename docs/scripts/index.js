@@ -16,13 +16,29 @@ const eatingSound = new Audio("docs/assets/sounds/chomp.mp3");
 const eatingVeggiesSound = new Audio("docs/assets/sounds/ew.mp3");
 
 //mute audio
-mute.onclick = function pauseAudio(){
+/* mute.onclick = function pauseAudio(){
 bgMusic.muted = true;
 eatingSound.muted = true;
 eatingVeggiesSound.muted = true;
 gameOverSound.muted = true;
-};
+}; */
 
+mute.onclick = function pauseAudio() {
+  if (bgMusic.muted) {
+    // audio is currently muted, so unmute it
+    bgMusic.muted = false;
+    eatingSound.muted = false;
+    eatingVeggiesSound.muted = false;
+    gameOverSound.muted = false;
+  } else {
+    // audio is currently unmuted, so mute it
+    bgMusic.muted = true;
+    eatingSound.muted = true;
+    eatingVeggiesSound.muted = true;
+    gameOverSound.muted = true;
+  }
+};
+ 
 //create new game
 const game = new Game(ctx, canvas.width, canvas.height, player);
 
