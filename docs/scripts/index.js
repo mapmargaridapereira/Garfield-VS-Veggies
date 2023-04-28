@@ -61,6 +61,14 @@ document.addEventListener("keydown", function(event) {
   }
 });
 
+//execute restart game function when tapping the R button
+document.addEventListener("keydown", function(event) {
+  if (event.keyCode === 82) { // reset button
+    game.reset()
+    game.start();
+  }
+});
+
 //movement keys for the player
 document.addEventListener("keydown", (e) => {
   switch (e.code) {
